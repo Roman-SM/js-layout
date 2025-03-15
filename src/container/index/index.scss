@@ -1,7 +1,71 @@
-@use '../../style' as s;
-
-main {
-	background: s.color(dark);
-	color: s.color(light);
-	padding: s.space(4);
-} 
+.page {
+  max-width: 375px;
+  display: grid;
+  gap: 20px;
+}
+.header {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background-color: #F7F7F7;
+  border-radius: 10px;
+  &__viewed {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid #E6E6E6;
+    border-radius: 10px;
+  }
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__category {
+    display: flex;
+    gap: 8px;
+  }
+  &__category--1 {
+    background-color: #F7E9E1;
+    padding: 8px 12px;
+    border-radius: 100px;
+    color: #F46F17;
+  }
+  &__category--2 {
+    background-color: #F6E8EF;
+    padding: 8px 12px;
+    border-radius: 100px;
+    color: #EF5DA8;
+  }
+  &__date {
+    color: #888888;
+  }
+  &__info {
+    font-size: 16px;
+    color: #363636;
+  }
+  &__info--viewed {
+    color: #888888;
+  }
+}
